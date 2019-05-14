@@ -326,3 +326,11 @@ INSERT INTO klassen
     ('lo9e-amo1','vlt03', 2019, 'amo'),
     ('lo9e-amo2','bkr02', 2019, 'amo'),
     ('lo9e-amo3','akr02', 2019, 'amo');
+
+INSERT INTO studenten (ov_nummer, achternaam, tussenvoegsel, voornaam, geboortedatum, postcode, plaats, gewicht, lengte, inschrijvings_datum) VALUES
+    (90000,'Klaus','','Klaas','1992-08-28','2212 AB','Alkmaar', 72.2, 1.86, '2019-02-01'),
+    (98967,'Pieters','','Pieter','1993-09-29','2213 CD','Groningen', 74.3, 1.86, '2019-03-01'),
+    (96250,'Alkan','','Result','1990-02-27','2214 EF','Den Haag', 75.4, 1.86, '2019-04-01'),
+    (94123,'Kers','','Olig','1991-07-22','2215 GH','Rotterdam', 76.5, 1.86, '2019-05-01');
+
+
