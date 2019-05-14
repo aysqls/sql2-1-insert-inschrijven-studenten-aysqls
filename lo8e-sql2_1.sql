@@ -343,3 +343,16 @@ INSERT INTO klassen_studenten(ov_nummer, klas_code) VALUES
 UPDATE studenten SET geboortedatum = '1992-07-22' WHERE ov_nummer = 94123;
 
 UPDATE studenten SET actief = FALSE WHERE inschrijvings_datum <= '2017-01-01';
+
+SELECT
+    s.ov_nummer, CONCAT(s.voornaam, ' ', s.tussenvoegsel, ' ', s.achternaam) AS student_naam,
+    k.klas_code, k.cohort,
+    CONCAT(d.voorletters, ' ', d.tussenvoegsel, ' ', d.achternaam) AS slb_naam
+FROM studenten AS s
+INNER JOIN klassen_studenten AS ks
+ON s.ov_nummer = ks.ov_nummer
+INNER JOIN klassen AS k
+ON ks.klas_code = k.klas_code
+INNER JOIN docenten AS d
+ON d.docent_code = k.slb_code
+WHERE actief = TRUE;
