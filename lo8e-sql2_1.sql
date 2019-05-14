@@ -340,4 +340,4 @@ INSERT INTO klassen_studenten(ov_nummer, klas_code) VALUES
     (96250,'lo9e-amo3'),
     (94123,'lo9e-amo1');
 
-
+UPDATE studenten SET geboortedatum = '1992-07-22' WHERE ov_nummer = 94123;
